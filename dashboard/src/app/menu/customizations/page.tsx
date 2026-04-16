@@ -135,7 +135,7 @@ export default function CustomizationsPage() {
 
   return (
     <DashboardLayout>
-      <div className="mb-8 flex items-center justify-between">
+      <div className="mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold text-white">Customizations</h1>
           <p className="text-[#666] text-sm mt-1">Manage customization groups and options</p>
@@ -302,7 +302,7 @@ export default function CustomizationsPage() {
                   {/* Add/Edit Option Form */}
                   {showAddOption === group.id ? (
                     <div className="bg-[#111111] rounded-lg p-4 border border-white/10">
-                      <div className="grid grid-cols-3 gap-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                         <input
                           value={optionForm.name}
                           onChange={(e) => setOptionForm({ ...optionForm, name: e.target.value })}

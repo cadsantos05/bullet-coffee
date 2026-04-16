@@ -123,7 +123,7 @@ export default function SettingsPage() {
 
   return (
     <DashboardLayout>
-      <div className="mb-8 flex items-center justify-between">
+      <div className="mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold text-white">Store Settings</h1>
           <p className="text-[#666] text-sm mt-1">Configure your coffee shop</p>
@@ -282,8 +282,8 @@ export default function SettingsPage() {
           <h2 className="text-lg font-semibold text-white mb-4">Store Hours</h2>
           <div className="space-y-3">
             {DAYS.map((day) => (
-              <div key={day} className="flex items-center gap-4">
-                <span className="text-sm text-white/60 w-28">{day}</span>
+              <div key={day} className="flex flex-wrap items-center gap-2 sm:gap-4">
+                <span className="text-sm text-white/60 w-full sm:w-28">{day}</span>
                 <input
                   type="time"
                   value={hours[day]?.open || '07:00'}

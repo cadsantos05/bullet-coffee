@@ -112,7 +112,7 @@ export default function ReportsPage() {
       </div>
 
       {/* Date Range */}
-      <div className="flex items-center gap-4 mb-6">
+      <div className="flex flex-wrap items-center gap-4 mb-6">
         <div>
           <label className="block text-xs text-[#666] mb-1">From</label>
           <input
@@ -134,7 +134,7 @@ export default function ReportsPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <StatsCard
           title="Total Revenue"
           value={`$${stats.totalRevenue.toFixed(2)}`}
